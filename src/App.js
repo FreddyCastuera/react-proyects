@@ -2,6 +2,7 @@ import './App.css';
 import React, {Component} from 'react';
 import Form from './Components/Form'
 import Table from './Components/Table'
+import 'bootstrap/dist/css/bootstrap.min.css';
 /*
   crear un semaforo en react (separado por componentes)
   guardar en un input usuario y correo 
@@ -40,7 +41,7 @@ class UsersList extends Component{
 
   render(){
     return (
-      <div className="container">
+      <div className="d-flex align-items-start">
         <Table users = {this.state.users} handleDeleteClick={this.handleDeleteClick}/>
         <Form  name={this.state.name} email={this.state.email} handleChange={this.handleChange} handleClick={this.handleClick}/>
       </div>
